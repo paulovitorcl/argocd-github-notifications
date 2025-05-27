@@ -1,0 +1,15 @@
+name: Handle ArgoCD Notification
+
+on:
+  repository_dispatch:
+    types: [argocd-sync-complete]
+
+jobs:
+  check-sync-result:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Result
+        run: |
+          echo "App: ${{ github.event.client_payload.app }}"
+          echo "Sync: ${{ github.event.client_payload.sync_status }}"
+          echo "Health: ${{ github.event.client_payload.health_status }}"
