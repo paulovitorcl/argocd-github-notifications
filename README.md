@@ -2,6 +2,8 @@
 
 This guide shows how to run **Argo CD locally** on a Mac using Kubernetes (`kind`), and integrate Argo CD with **GitHub Actions** via dynamic webhooks that respond to application sync status.
 
+In validation
+
 ---
 
 ## 🛠️ Prerequisites
